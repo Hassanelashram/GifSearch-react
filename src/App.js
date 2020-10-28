@@ -1,6 +1,6 @@
 import './App.css';
-import SearchForm from './components/SearchForm'
-import Gifs from './components/Gifs'
+import SearchForm from './components/Forms/SearchForm'
+import Gifs from './components/Gifs/Gifs'
 import { useState } from 'react';
 function App() {
   const [gifs, setGifs] = useState([])
@@ -11,6 +11,7 @@ function App() {
     .then(response => response.json())
     .then((res) => {
         setGifs(res.data)
+        console.log(res.data)
     })
   }
 

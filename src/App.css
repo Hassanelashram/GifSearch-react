@@ -1,11 +1,11 @@
 
 
 body {
-  background-image: linear-gradient(#B2FEFA, #0ED2F7);
+  background-image: linear-gradient(#c1f8f5, #7dddf0);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -28,20 +28,32 @@ input {
 }
 
 .gifs {
-  /* box-shadow: 0px 0px 10px 5px rgb(174, 174, 174); */
   padding: 10px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   margin: 50px auto;
-  /* background-color: white; */
 }
 
-.gif {
+.card {
+  background-color: white;
+  height: 400px;
   margin: 10px;
-  height: 250px;
-  width: 200px;
-  flex: 1 0 25%;
+  flex: 30%;
+}
+.card-top {
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-footer {
+  padding: 0px 10px;
+  /* display: flex; */
+}
+
+a {
+  text-decoration: none;
 }
 
 .search-form {

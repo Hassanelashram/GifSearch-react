@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Gifs from './Gifs'
+import Gifs from '../Gifs/Gifs'
 const SearchForm = ({onSearchFormChange}) => {
     return(
         <div className="container">
