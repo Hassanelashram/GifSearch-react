@@ -1,11 +1,18 @@
 
 const Gif = ({gif}) => {
+    const showHeart = (e) => {
+        e.target.children[0].style.display = "inline-block"
+    }
+    const hideHeart = (e) => {
+        e.target.children[0].style.display = "none"
+    }
     return(
         // <img src={gif.images.original.url} className="gif" alt=""/>
         
-        <div className="card">
-            <div style={{backgroundImage: "url(" + gif.images.original.url + ")"}} className="card-top">
-                Add to fav
+        <div  className="card">
+            <div onMouseEnter={showHeart} onMouseLeave={hideHeart} style={{backgroundImage: "url(" + gif.images.original.url + ")"}} className="card-top">
+                <i class="far fa-heart"></i>
+                {/* <i class="far fa-heart"></i> */}
             </div>
             <div className="card-footer">
                 <h4><a href={gif.source}>{gif.title}</a></h4>
