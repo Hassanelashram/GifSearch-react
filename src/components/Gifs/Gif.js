@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 const Gif = ({gif}) => {
     const showHeart = (e) => {
         e.target.children[0].style.display = "inline-block"
@@ -15,7 +15,13 @@ const Gif = ({gif}) => {
                 {/* <i class="far fa-heart"></i> */}
             </div>
             <div className="card-footer">
-                <h4><a href={gif.source}>{gif.title}</a></h4>
+                
+                    <h4>
+                    <Link to={`/gifs/${gif.id}`}>
+                        {gif.title}
+                    </Link>
+                    </h4>
+                
             </div>
         </div>
     )
