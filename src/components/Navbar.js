@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom'
-const Navbar = () => {
+import SearchForm from './Forms/SearchForm'
+import { useState } from 'react'
+const Navbar = ({searchFill}) => {
+  
   return (
-      <nav>
-          <Link to="/">
-            <h1>Logo</h1>
-          </Link>
-          <ul className="nav-Links">
-              <Link to="/about">
-                <li>About</li>
-              </Link>
-              <li>Contact</li>
-          </ul>
-      </nav>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid">
+      <Link className="navbar-brand" to="/">Logo</Link>
+      <SearchForm searchFill={searchFill} />
+      </div>
+    </nav>
   );
 }
 
